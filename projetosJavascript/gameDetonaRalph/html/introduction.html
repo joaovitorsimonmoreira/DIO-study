@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/introduction.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>DETONA RALPH</h1>
+    <p>Clique no ralph para somar pontos, mas tome cuidado para não errar.</p>
+    <label for="dificulty">Escola a dificuldade</label>
+    <select name="dificulty" id="dificulty">
+      <option value="">easy</option>
+      <option value="medium">medium</option>
+      <option value="hard">hard</option>
+      <option value="not try">not try</option>
+    </select>
+    <button id="buttonEscolher" onclick="escolherDificuldade()">ESCOLHER</button>
+    
+   <button id="start" onclick="iniciarJogo()">START</button>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
