@@ -11,7 +11,7 @@ const state = {
   values: {
     timeId: null,
     countDownTimerId: setInterval(countDown, 1000),
-    enemyVelocity: 700,
+
     hitPosition: 0,
     scoreValue: 0,
     currentTime: 60,
@@ -19,6 +19,45 @@ const state = {
 
   },
 }
+
+
+function iniciarJogo(){
+  
+  let escolha = document.getElementById('dificulty').value;
+  let enemyVelocity;
+
+  if(escolha == "easy"){
+    enemyVelocity = 1000
+
+  } else if(escolha == "medium"){
+    enemyVelocity = 700
+
+  }else if(escolha == "hard"){
+    enemyVelocity = 500
+
+  }else if(escolha == "not try"){
+    enemyVelocity = 300
+  }else{
+    enemyVelocity = 1000
+  }
+
+   
+
+  let novaURL = '//127.0.0.1:5501/projetosJavascript/gameDetonaRalph/html/index.html?enemyVelocity=' +escolha;
+
+  
+  return novaURL;
+  
+}
+iniciarJogo();
+
+function startButton(){
+  let novaURL = iniciarJogo();
+  window.location.href = novaURL;
+}
+document.getElementById('startButton').addEventListener('click', function() {
+  initialize();
+});
 
 function playSound(Sound){
   let audio = new Audio(`../audios/${Sound}`);
@@ -53,8 +92,13 @@ function randomSquare(){
   state.values.hitPosition = randomSquare.id;
 }
 
-function moveEnemy(){
-  state.values.timeId = setInterval(randomSquare,state.values.enemyVelocity)
+// function moveEnemy(){
+//   state.values.timeId = setInterval(randomSquare,state.values.enemyVelocity)
+// }
+function moveEnemy() {
+  state.values.timeId = setInterval(() => {
+    randomSquare();
+  },enemyVelocity);
 }
 
 function addListenerHitBox(){
@@ -68,6 +112,7 @@ function addListenerHitBox(){
       }else{
         state.values.lifes--;
         state.view.gameLifes.textContent = state.values.lifes
+        
 
         if(state.values.lifes === 0){
           clearInterval(state.values.lifes);
@@ -85,8 +130,11 @@ function addListenerHitBox(){
 }
 
 function initialize(){
+  
   moveEnemy();
   addListenerHitBox();
 }
+
+
 
 initialize();

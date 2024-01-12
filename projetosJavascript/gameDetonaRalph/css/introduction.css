@@ -27,13 +27,11 @@ main{
   
 }
 select{
-  text-transform: uppercase;
   width: 200px;
+  cursor: pointer;
 }
 
-option{
-  text-transform: uppercase;
-}
+
 #start{
   width: 200px;
   height: 100px;
@@ -43,6 +41,7 @@ option{
   border-radius: 10px;
   font-size: 18px;
   letter-spacing: 0.1rem;
+  cursor: pointer;
 }
 #start:hover{
   transform: scale(1.1);
