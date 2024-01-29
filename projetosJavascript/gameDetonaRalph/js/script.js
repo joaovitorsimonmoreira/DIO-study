@@ -11,7 +11,7 @@ const state = {
   values: {
     timeId: null,
     countDownTimerId: setInterval(countDown, 1000),
-
+    enemyVelocity: 1000,
     hitPosition: 0,
     scoreValue: 0,
     currentTime: 60,
@@ -21,43 +21,47 @@ const state = {
 }
 
 
-function iniciarJogo(){
+// function escolherDificuldade(){
+//   let escolha = document.getElementById('dificulty').value;
+//   let vel;
+
+//   if(escolha == "easy"){
+//     vel = 1000
+
+//   } else if(escolha == "medium"){
+//     vel = 700
+
+//   }else if(escolha == "hard"){
+//     vel = 500
+
+//   }else if(escolha == "not try"){
+//     vel = 300
+//   }else{
+//     vel = 1000
+//   }
+//   return state.values.enemyVelocity = vel
+// }
+
+// function iniciarJogo(){
   
-  let escolha = document.getElementById('dificulty').value;
-  let enemyVelocity;
-
-  if(escolha == "easy"){
-    enemyVelocity = 1000
-
-  } else if(escolha == "medium"){
-    enemyVelocity = 700
-
-  }else if(escolha == "hard"){
-    enemyVelocity = 500
-
-  }else if(escolha == "not try"){
-    enemyVelocity = 300
-  }else{
-    enemyVelocity = 1000
-  }
+  
 
    
 
-  let novaURL = '//127.0.0.1:5501/projetosJavascript/gameDetonaRalph/html/index.html?enemyVelocity=' +escolha;
+//   let novaURL = '//127.0.0.1:5501/projetosJavascript/gameDetonaRalph/html/index.html?enemyVelocity=' +escolherDificuldade();
 
   
-  return novaURL;
+//   return novaURL;
   
-}
-iniciarJogo();
+// }
 
-function startButton(){
-  let novaURL = iniciarJogo();
-  window.location.href = novaURL;
-}
-document.getElementById('startButton').addEventListener('click', function() {
-  initialize();
-});
+// function startButton(){
+//   let novaURL = iniciarJogo();
+//   window.location.href = novaURL;
+// }
+// document.getElementById('startButton').addEventListener('click', function() {
+//   initialize();
+// });
 
 function playSound(Sound){
   let audio = new Audio(`../audios/${Sound}`);
@@ -91,15 +95,12 @@ function randomSquare(){
   randomSquare.classList.add('enemy');
   state.values.hitPosition = randomSquare.id;
 }
-
-// function moveEnemy(){
-//   state.values.timeId = setInterval(randomSquare,state.values.enemyVelocity)
+ function moveEnemy(){   state.values.timeId = setInterval(randomSquare,state.values.enemyVelocity) }
+// function moveEnemy() {
+//   state.values.timeId = setInterval(() => {
+//     randomSquare();
+//   },escolherDificuldade());
 // }
-function moveEnemy() {
-  state.values.timeId = setInterval(() => {
-    randomSquare();
-  },enemyVelocity);
-}
 
 function addListenerHitBox(){
   state.view.squares.forEach((square) => {
