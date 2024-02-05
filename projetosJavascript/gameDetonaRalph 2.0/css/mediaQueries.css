@@ -1,0 +1,157 @@
+
+
+@media(min-width: 320px) and (max-width: 375px){
+  .menu{
+    height: 6.2rem;
+  }
+
+  .tittle{
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+.square{
+  width: 6.5rem;
+  height:  6.5rem;
+}
+ 
+}
+@media(min-width: 376px) and (max-width: 425px){
+  .menu{
+    height: 6.2rem;
+  }
+
+  .tittle{
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+  .square{
+    width: 8rem;
+    height:  8rem;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 900px){
+  .menu{
+    height: 6.2rem;
+  }
+
+  .tittle{
+    font-size: 24px;
+    margin-top: 1rem;
+  }
+
+  .square{
+    width: 10rem;
+    height:  10rem;
+  }
+}
+
+@media(min-width: 900px) and (max-width: 1024px){
+  .menu{
+    height: 10rem;
+  }
+
+  .tittle{
+    font-size: 32px;
+    margin-top: 1rem;
+  }
+
+  .square{
+    width: 16.25rem;
+    height:  16.25rem;
+  }
+  .lifes img{
+    width: 60px;
+    height: 60px;
+  }
+  
+  #gameScore, #gameLifes, #timeLeft{
+    font-size: 40px;
+  }
+}
+
+@media(min-width: 1366px) and (max-width: 1440px){
+  .menu{
+    height: 12rem;
+  }
+
+  .tittle{
+    font-size: 48px;
+    margin-top: 1rem;
+  }
+
+  .square{
+    width: 16.25rem;
+    height:  16.25rem;
+  }
+  .lifes img{
+    width: 80px;
+    height: 80px;
+  }
+  #gameScore, #gameLifes, #timeLeft{
+    font-size: 40px;
+  }
+}
+
+@media(min-width: 1600px) and (max-width: 2560px){
+  .menu{
+    height: 20rem;
+  }
+
+  .tittle{
+    font-size: 80px;
+    margin-top: 1rem;
+  }
+
+  .square{
+    width: 28rem;
+    height:  28rem;
+  }
+  .lifes img{
+    width: 120px;
+    height: 120px;
+  }
+  #gameScore, #gameLifes, #timeLeft{
+    font-size: 80px;
+  }
+  .copyright{
+    font-size: 60px;
+  }
+}
+
+/* @media(max-width: 375px){
+  .menu{
+    height: 6.2rem;
+  }
+
+  .tittle{
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+  
+
+  .square{
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+@media(max-width: 425px){
+  .menu{
+    height: 6.2rem;
+  }
+
+  .tittle{
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+
+  
+
+  .square{
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+}  */
